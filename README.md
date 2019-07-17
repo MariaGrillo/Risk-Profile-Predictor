@@ -21,7 +21,7 @@ This project uses a (modified) dataset from Kaggle. The dataset has been thoroug
 - Family_Hist_1-5 - A set of normalized variables relating to the family history of the applicant.
 - Medical_History_1-41 - A set of normalized variables relating to the medical history of the applicant.
 - Medical_Keyword_1-48 - A set of dummy variables relating to the presence of/absence of a medical keyword being associated with the application.
-- Response - This is the target variable, an ordinal variable relating to the final decision associated with an application
+- Response - This is the target variable, an ordinal variable relating to the final decision associated with an application.
 
 **The following variables are all categorical (nominal):**
 ```
@@ -46,11 +46,10 @@ The Risk Profile Predictor uses a Random Forest Classifier to assign a risk cate
 ## Structure
 
 model.py: this file contains the InsuranceModel class with the following main methods:
-- preprocess_training_data: preprocessing steps for training data
+- Preprocess_training_data: preprocessing steps for training data
 - Preprocess_unseen_data: preprocessing steps for testing data
-- fit: method to train the model
-- predict: method to generate predictions
-
+- Fit: method to train the model
+- Predict: method to generate predictions
 
 run.py: python script to download the data, train the model and test it. Once trained, the model is serialised in a pickle file.
 
@@ -62,4 +61,4 @@ Download the python files of the project and execute ‘python run.py setup’ t
 
 python run.py train : Instanciates and trains the Risk Profile Predictor Model.
 
-python run.py test : Generates predictions for the test data using a trained Risk Profile Predictor Model
+python run.py test : Generates predictions for the test data using a trained Risk Profile Predictor Model.
